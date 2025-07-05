@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface Product {
   id: number
@@ -22,22 +22,25 @@ export function CategorySection({ category, products, description }: CategorySec
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [selectedProduct, setSelectedProduct] = useState(products[0])
 
-  // Get first 3 images from the category products
-  const categoryImages = products
-    .flatMap(product => product.images)
-    .slice(0, 3)
+  // Get all images from the selected product
+  const carouselImages = selectedProduct.images
 
   const nextImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === categoryImages.length - 1 ? 0 : prev + 1
+      prev === carouselImages.length - 1 ? 0 : prev + 1
     )
   }
 
   const prevImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === 0 ? categoryImages.length - 1 : prev - 1
+      prev === 0 ? carouselImages.length - 1 : prev - 1
     )
   }
+
+  // Reset image index when selected product changes
+  useEffect(() => {
+    setCurrentImageIndex(0)
+  }, [selectedProduct])
 
   if (products.length === 0) {
     return null
@@ -61,8 +64,8 @@ export function CategorySection({ category, products, description }: CategorySec
         <div className="relative">
           <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
             <Image
-              src={categoryImages[currentImageIndex]}
-              alt={`${category} - Image ${currentImageIndex + 1}`}
+              src={carouselImages[currentImageIndex]}
+              alt={`${selectedProduct.name} - Image ${currentImageIndex + 1}`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
@@ -74,7 +77,7 @@ export function CategorySection({ category, products, description }: CategorySec
             </div>
 
             {/* Navigation arrows */}
-            {categoryImages.length > 1 && (
+            {carouselImages.length > 1 && (
               <>
                 <button
                   onClick={prevImage}
@@ -98,9 +101,9 @@ export function CategorySection({ category, products, description }: CategorySec
             )}
 
             {/* Image Indicators */}
-            {categoryImages.length > 1 && (
+            {carouselImages.length > 1 && (
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {categoryImages.map((_, index) => (
+                {carouselImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
@@ -114,9 +117,9 @@ export function CategorySection({ category, products, description }: CategorySec
           </div>
 
           {/* Thumbnail preview */}
-          {categoryImages.length > 1 && (
+          {carouselImages.length > 1 && (
             <div className="flex justify-center mt-6 space-x-4">
-              {categoryImages.map((image, index) => (
+              {carouselImages.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}

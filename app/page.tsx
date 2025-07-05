@@ -1,6 +1,7 @@
 import { Hero } from "./components/Hero"
 import { ProductGrid } from "./components/ProductGrid"
 import { CategorySection } from "./components/CategorySection"
+import { Footer } from "./components/Footer"
 
 const products = [
   {
@@ -189,6 +190,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   )
 }

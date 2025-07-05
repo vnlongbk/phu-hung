@@ -12,21 +12,21 @@ export function Hero() {
           {/* Left Content */}
           <div className="space-y-8">
             {/* Company Logo & Badge */}
-            <div className="flex items-center space-x-4">
-              <div className="relative w-16 h-16 flex-shrink-0">
+            <div className="flex items-center space-x-6">
+              <div className="relative w-24 h-24 flex-shrink-0">
                 <Image
                   src="/photo/logo/IMG_0223.JPG"
                   alt="Phú Hưng Logo"
                   fill
-                  className="object-contain rounded-lg shadow-sm"
+                  className="object-contain rounded-xl shadow-lg"
                   priority
                 />
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
+                <h1 className="text-4xl font-bold text-slate-900 tracking-tight">
                   Phú Hưng
                 </h1>
-                <p className="text-slate-600 font-medium">Since 1995</p>
+                <p className="text-lg text-slate-600 font-medium">Since 1995</p>
               </div>
             </div>
 
