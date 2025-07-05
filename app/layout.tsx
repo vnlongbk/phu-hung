@@ -8,6 +8,16 @@ export const metadata: Metadata = {
   authors: [{ name: 'Phú Hưng' }],
   creator: 'Phú Hưng',
   publisher: 'Phú Hưng',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.ico', sizes: '16x16', type: 'image/x-icon' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
+  manifest: '/manifest.json',
   formatDetection: {
     email: false,
     address: false,
@@ -33,12 +43,21 @@ export const metadata: Metadata = {
     siteName: 'Phú Hưng',
     locale: 'vi_VN',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Phú Hưng - Đặc sản chả giò truyền thống',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Phú Hưng - Đặc sản chả giò truyền thống',
     description: 'Chuyên sản xuất và cung cấp các loại chả giò, chả lụa, pate và đặc sản truyền thống Việt Nam chất lượng cao.',
     creator: '@phuhung',
+    images: ['/og-image.jpg'],
   },
   viewport: {
     width: 'device-width',
