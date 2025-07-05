@@ -181,11 +181,11 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="bg-white px-6 py-4 rounded-lg shadow-md">
               <h3 className="font-semibold text-primary-800 mb-2">Hotline</h3>
-              <p className="text-gray-600">0123 456 789</p>
+              <p className="text-gray-600">036 920 0939</p>
             </div>
             <div className="bg-white px-6 py-4 rounded-lg shadow-md">
               <h3 className="font-semibold text-primary-800 mb-2">Email</h3>
-              <p className="text-gray-600">info@phuhung.vn</p>
+              <p className="text-gray-600">chaluaphuhung@gmail.com</p>
             </div>
           </div>
         </div>

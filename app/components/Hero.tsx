@@ -26,7 +26,7 @@ export function Hero() {
                 <h1 className="text-4xl font-bold text-slate-900 tracking-tight">
                   Phú Hưng
                 </h1>
-                <p className="text-lg text-slate-600 font-medium">Since 1995</p>
+                <p className="text-lg text-slate-600 font-medium">Since 1998</p>
               </div>
             </div>
 
@@ -37,24 +37,19 @@ export function Hero() {
                 <span className="block text-amber-600">Truyền Thống</span>
               </h2>
               <p className="text-xl md:text-2xl text-slate-700 leading-relaxed max-w-2xl">
-                Chuyên sản xuất và cung cấp các loại chả giò, chả lụa, pate
-                và đặc sản truyền thống Việt Nam chất lượng cao
+                Chuyên cung cấp giò chả các loại | Chả lụa - Chả bò - Chả chiên - Chả giò - Chả thủ
               </p>
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-3 gap-6 py-8">
+            <div className="grid grid-cols-2 gap-6 py-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-slate-900">25+</div>
+                <div className="text-3xl font-bold text-slate-900">26+</div>
                 <div className="text-sm text-slate-600 font-medium">Năm Kinh Nghiệm</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-slate-900">100%</div>
                 <div className="text-sm text-slate-600 font-medium">Nguyên Liệu Tươi</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-slate-900">1000+</div>
-                <div className="text-sm text-slate-600 font-medium">Khách Hàng Tin Tưởng</div>
               </div>
             </div>
 
@@ -78,7 +73,7 @@ export function Hero() {
                 </div>
                 <div>
                   <div className="text-sm text-slate-600">Hotline</div>
-                  <div className="font-semibold text-slate-900">0123 456 789</div>
+                  <div className="font-semibold text-slate-900">036 920 0939</div>
                 </div>
               </div>
 
@@ -90,7 +85,7 @@ export function Hero() {
                 </div>
                 <div>
                   <div className="text-sm text-slate-600">Email</div>
-                  <div className="font-semibold text-slate-900">info@phuhung.vn</div>
+                  <div className="font-semibold text-slate-900">chaluaphuhung@gmail.com</div>
                 </div>
               </div>
             </div>

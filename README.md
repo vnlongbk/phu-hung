@@ -78,8 +78,8 @@ Website hiển thị các sản phẩm chính:
 
 ## Liên Hệ
 
-- **Hotline**: 0123 456 789
-- **Email**: info@phuhung.vn
+- **Hotline**: 036 920 0939
+- **Email**: chaluaphuhung@gmail.com
 
 ## License
 
